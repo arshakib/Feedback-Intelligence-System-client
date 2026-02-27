@@ -8,7 +8,7 @@ import type { IFeedback } from './types';
 import FeedbackCard from './components/FeedbackCard';
 import CreateModal from './components/CreateModal';
 
-const API_URL = 'http://localhost:5000/api/feedbacks';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/feedbacks';
 
 export default function App() {
   const [feedbacks, setFeedbacks] = useState<IFeedback[]>([]);
